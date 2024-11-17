@@ -1,30 +1,29 @@
 .footer {
-    background: #333;
-    color: white;
-    padding: 1rem 2rem;
-    text-align: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .footer-links a {
-    color: #4facfe;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-    color: #00f2fe;
-  }
-  
+  background: #123C69; /* Deep navy */
+  color: #EEE2DC; /* Ivory text */
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #AC3B61; /* Muted rose links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #EDC7B7; /* Blush pink hover */
+}

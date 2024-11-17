@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>© 2024 Lucas Fedders | All Rights Reserved</p>
+        <p>© 2024 Megan Calme | All Rights Reserved</p>
         <div className="footer-links">
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
             LinkedIn

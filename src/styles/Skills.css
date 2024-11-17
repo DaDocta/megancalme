@@ -1,77 +1,81 @@
 .skills-section {
-  width: 100vw; /* Full viewport width */
+  width: 100%;
+  background-color: #FDF7EC; /* Simple ivory background */
+  color: #123C69; /* Deep navy text */
+  padding: 5rem 2rem;
   text-align: center;
-  background: linear-gradient(to bottom, #2C3E50, #1A252F); /* Matches About colors */
-  color: white; /* White text for contrast */
-  padding: 4rem 0;
 }
 
-/* Skills Title */
 .skills-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #ff9800; /* Highlighted orange */
+  color: #AC3B61; /* Muted rose */
 }
 
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  width: 100%; /* Ensure it doesn't exceed the container */
-  max-width: 1200px;
+/* Skills List */
+.skills-list {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem; /* Consistent padding to avoid overflow */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-
-/* Skill Card */
-.skill-card {
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle transparent background */
-  padding: 1.5rem;
+/* Individual Skill Item */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+.skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Skill Icon */
 .skill-icon {
-  font-size: 2rem;
-  color: #ff9800; /* Matches the accent color */
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #AC3B61; /* Muted rose */
 }
 
-.skill-card h3 {
-  font-size: 1.3rem;
-  color: white; /* Maintain white text */
-  margin-bottom: 0.5rem;
+/* Skill Details */
+.skill-details {
+  flex: 1;
 }
 
-.skill-card p {
-  font-size: 1rem;
-  color: #ccc; /* Subtle text color */
+.skill-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #123C69; /* Deep navy */
 }
 
-/* Portrait Orientation */
-@media (orientation: portrait) {
-  .skills-section {
-    padding: 5rem 0; /* Increased padding for vertical space */
-  }
-
-  .skill-card {
-    padding: 1.2rem; /* Adjust padding for smaller screens */
-  }
+.skill-bar-container {
+  background: #FDF7EC; /* Light ivory */
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
 }
 
-/* Landscape Orientation */
-@media (orientation: landscape) {
-  .skills-section {
-    padding: 3rem 0; /* Standard padding for horizontal space */
-  }
+.skill-bar {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.skill-bar.advanced {
+  width: 90%;
+  background: #AC3B61; /* Muted rose */
+}
+
+.skill-bar.intermediate {
+  width: 70%;
+  background: #C08497; /* Soft pink */
 }

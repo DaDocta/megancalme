@@ -1,25 +1,123 @@
-/* Experience Section */
 .experience-section {
-    width: 100%; /* Full width to avoid scrolling */
-    background: linear-gradient(to bottom, #2C3E50, #1A252F); /* Matches the overall theme */
-    color: white;
-    padding: 4rem 0; /* Spacing around the section */
-    text-align: center;
+  width: 100%;
+  background: linear-gradient(to bottom, #FDF7EC, #EDC7B7); /* Ivory to blush */
+  color: #123C69; /* Deep navy */
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.experience-section h2 {
+  font-size: 2.5rem;
+  color: #AC3B61; /* Muted rose */
+  margin-bottom: 3rem;
+}
+
+/* Timeline */
+.experience-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px; /* Default line thickness */
+  background: #AC3B61; /* Muted rose */
+  z-index: 1;
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  width: 45%; /* Alternating items width in landscape */
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.timeline-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Left-aligned items */
+.timeline-item.left {
+  align-self: flex-end; /* Align left items to the right of the timeline */
+}
+
+/* Right-aligned items */
+.timeline-item.right {
+  align-self: flex-start; /* Align right items to the left of the timeline */
+}
+
+/* Timeline Item Content */
+.timeline-item h3 {
+  font-size: 1.5rem;
+  color: #123C69; /* Deep navy */
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item h4 {
+  font-size: 1.2rem;
+  color: #AC3B61; /* Muted rose */
+  margin-bottom: 0.8rem;
+  font-weight: normal;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #BAB2B5; /* Muted gray */
+  line-height: 1.6;
+}
+
+/* Portrait Mode */
+@media (max-width: 768px) {
+  .experience-timeline {
+    align-items: flex-start; /* Align all items to one side in portrait */
   }
-  
-  .experience-section h2 {
-    font-size: 2.5rem;
-    color: #ff9800; /* Highlight title with orange */
-    margin-bottom: 3rem;
+
+  .timeline-line {
+    left: 5%; /* Shift timeline line to the left */
+    width: 6px; /* Thicker timeline for portrait mode */
   }
-  
-  /* Experience Container */
-  .experience-container {
-    max-width: 1200px; /* Constrain content width */
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 2rem;
-    padding: 0 1rem; /* Padding for smaller screens */
+
+  .timeline-item {
+    width: 90%; /* Full width with padding */
+    margin-left: 10%; /* Align all boxes with the line */
+    text-align: left;
   }
-  
+
+  .timeline-item.left,
+  .timeline-item.right {
+    align-self: flex-start; /* Remove alternation in portrait */
+  }
+}
+
+/* Landscape Mode */
+@media (orientation: landscape) {
+  .experience-timeline {
+    align-items: center; /* Center the timeline in landscape */
+  }
+
+  .timeline-line {
+    left: 50%; /* Center the timeline in landscape */
+    width: 4px; /* Standard width for landscape */
+  }
+
+  .timeline-item.left {
+    align-self: flex-end; /* Alternating left box alignment */
+  }
+
+  .timeline-item.right {
+    align-self: flex-start; /* Alternating right box alignment */
+  }
+}

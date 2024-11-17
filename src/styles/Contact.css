@@ -1,87 +1,109 @@
-/* Contact Section */
 .contact-section {
-  width: 100%; /* Full width to prevent horizontal scrolling */
-  background: linear-gradient(to bottom, #2C3E50, #1A252F); /* Matches About and Experience theme */
-  color: white; /* Consistent text color for dark backgrounds */
-  padding: 5rem 2rem; /* Add vertical and horizontal padding */
+  width: 100%;
+  background: linear-gradient(to bottom, #EDC7B7, #FDF7EC); /* Blush to ivory */
+  color: #123C69; /* Deep navy */
+  padding: 5rem 2rem;
   text-align: center;
+  position: relative;
+  overflow: hidden; /* Prevent any layout overflow */
 }
 
-/* Title */
 .contact-section h2 {
-  font-size: 2.5rem;
-  color: #ff9800; /* Highlight title with orange */
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #AC3B61; /* Muted rose */
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
 }
 
-/* Contact Form */
+/* Form Container */
 .contact-form {
-  max-width: 500px; /* Shrink form width for better spacing */
-  margin: 0 auto; /* Center the form */
-  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent background */
-  padding: 2.5rem; /* Add internal padding for spacing */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for form elevation */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  background-color: rgba(255, 255, 255, 0.85); /* Subtle transparent background */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Elevated shadow */
+  position: relative;
+  z-index: 2;
+  transform: translateY(0);
+  animation: fadeInUp 1s ease-out;
 }
 
-/* Form Group */
-.form-group {
-  margin-bottom: 1.5rem; /* Add spacing between inputs */
+/* Inputs and Textareas */
+.contact-form label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #123C69;
+  margin-bottom: 0.5rem;
+  display: block;
+  text-transform: capitalize;
 }
 
-/* Form Control */
-.form-control {
-  width: 100%; /* Full width input */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
   padding: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-  color: white; /* White text for readability */
-  border-radius: 4px;
+  border: 2px solid rgba(44, 62, 80, 0.2); /* Subtle border */
+  border-radius: 6px;
   font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s ease;
+  margin-bottom: 1rem;
+  background-color: #fefefe;
+  transition: all 0.3s ease;
 }
 
-.form-control:focus {
-  border-color: #ff9800; /* Highlighted border on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #AC3B61; /* Highlighted focus border */
+  background-color: rgba(255, 245, 245, 0.8); /* Soft background for focus */
+  outline: none;
 }
 
 /* Submit Button */
-.submit-button {
-  background-color: #3498DB; /* Professional blue */
-  color: white;
-  padding: 1rem 2rem;
+.contact-form button {
+  display: inline-block;
+  background-color: #AC3B61; /* Muted rose */
+  color: #FFF;
+  padding: 0.8rem 2rem;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: 6px;
   font-size: 1.1rem;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.submit-button:hover {
-  background-color: #E74C3C; /* Red hover effect for prominence */
-  transform: translateY(-3px); /* Slight lift on hover */
+.contact-form button:hover {
+  background-color: #123C69; /* Deep navy */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Portrait Orientation */
-@media (orientation: portrait) {
-  .contact-section {
-    padding: 6rem 1.5rem; /* Add vertical and horizontal padding for taller screens */
-  }
-
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .contact-form {
-    padding: 2rem; /* Adjust padding for smaller screens */
+    padding: 1.5rem 1.8rem;
+    max-width: 90%;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
-/* Landscape Orientation */
-@media (orientation: landscape) {
-  .contact-section {
-    padding: 4rem 2rem; /* Adjust padding for horizontal layouts */
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
-
-  .contact-form {
-    max-width: 450px; /* Reduce form width slightly for landscape */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

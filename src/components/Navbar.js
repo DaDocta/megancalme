@@ -5,10 +5,9 @@ import '../styles/Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="logo">Lucas Fedders</div>
+      <a href="/" className="logo">Megan Calme</a>
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
+        <li><Link to="/portfolio">See My Portfolio</Link></li>
       </ul>
     </nav>
   );

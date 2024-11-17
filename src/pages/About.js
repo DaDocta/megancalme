@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/About.css';
 import Picture from '../assets/Picture.jpg';
-import { FaLightbulb, FaBriefcase, FaUsers } from 'react-icons/fa'; // Icons for business theme
+import { FaLightbulb, FaBriefcase, FaUsers } from 'react-icons/fa'; // Icons
 
 const About = () => {
   return (
@@ -10,34 +10,34 @@ const About = () => {
         <div className="about-text">
           <h2 className="about-title">About Me</h2>
           <p>
-            Hi, I'm Lucas Fedders, a driven leader and problem solver passionate about 
-            innovation and strategy. My journey began as a go-kart mechanic, where I honed 
-            troubleshooting and creative thinking skills. 
+            Hi, I'm Megan Calme, a driven and creative communicator studying Integrated Strategic
+            Communication at the University of Kentucky. My passion lies in connecting people
+            through storytelling, event management, and visual media.
           </p>
           <p>
-            As a varsity soccer player and Young Life leader, I've developed leadership 
-            qualities and the ability to inspire and collaborate effectively. My goal is 
-            to drive meaningful impact in the business world through innovative solutions.
+            Whether behind the camera or organizing impactful events, I aim to bring people together
+            and create memorable experiences. I thrive on building relationships and developing
+            innovative solutions to any challenge.
           </p>
           <div className="about-icons">
             <div className="icon-item">
               <FaLightbulb className="icon" />
-              <span>Problem Solver</span>
+              <span>Creative Thinker</span>
             </div>
             <div className="icon-item">
               <FaBriefcase className="icon" />
-              <span>Strategic Thinker</span>
+              <span>Strategic Planner</span>
             </div>
             <div className="icon-item">
               <FaUsers className="icon" />
-              <span>Team Leader</span>
+              <span>Relationship Builder</span>
             </div>
           </div>
         </div>
-        <img 
+        <img
           src={Picture}
-          alt="Lucas Fedders" 
-          className="about-image" 
+          alt="Megan Calme"
+          className="about-image"
         />
       </div>
     </div>
